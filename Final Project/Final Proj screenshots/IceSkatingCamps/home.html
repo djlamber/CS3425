@@ -1,0 +1,36 @@
+<?php
+
+if (isset($_SESSION["loggedIn"]) ){
+   echo "You have already logged in";
+   header("LOCATION:homepage.php");
+   return;
+}
+
+?>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <h1> Ice Skating Camps </h1>
+  </head>
+  <body>
+    Campers Login Here:
+    <div>
+      <form method="get" action="camperLogin.php">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <br>
+    Not a camper?
+    <form method="get" action="register.php">
+      <button type="submit">Register</button>
+    </form>
+    <br>
+    Coaches Login Here:
+    <div>
+      <form method="get" action="coachLogin.php">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </body>
+</html>
+
